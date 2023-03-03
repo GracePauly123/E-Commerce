@@ -1,3 +1,9 @@
+/* colors 
+yellow:#FFDE00
+ash :#EFEFEF
+cream:#FFFAE7
+red: D2001A*/
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -7,12 +13,79 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-header{
-  background-color: #404040;
+/* navbar section */
+.site-container {
+  min-height: 80vh;
+}
+.img-icon {
+  width: 5%;
+}
+.brand-name {
+  float: left;
+  margin-left: 1rem;
+}
+.position-left {
+  float: left;
+}
+
+.img-cart {
+  width: 20%;
+}
+.search-color {
+  background-color: white;
+  color: #d2001a;
+}
+
+/* main section */
+.products {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+main {
+  flex: 1;
+}
+.product {
+  border: 1px solid #d2001a;
+  margin: 1rem;
+}
+.product img {
+  width: 200px;
+  height: 250px;
+  max-width: 300px;
+}
+.product-info {
   padding: 1rem;
 }
-header a{
- color: white;
- font-weight: bold;
- text-decoration: none;
+.card-size {
+  width: 220px;
+  height: 250px;
+  padding-top: 30px;
+  padding-left: 30px;
+}
+.product-btn-color{
+  background-color: #d2001a;
+  max-width: 150px;
+  margin-left: 40px;
+}
+.font{
+  font-size:15px;
+  color: black;
+  align-items: center;
+  text-decoration: underline;
+  text-decoration-color: black;
+}
+.item-center{
+  text-align: center;
+}
+.price{
+  font-weight: bold;
+}
+
+/* footer section */
+.btn-color {
+  background-color: #d2001a;
+}
+.footer-bg-color {
+  background-color: #fffae7;
 }
