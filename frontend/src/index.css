@@ -37,6 +37,14 @@ body {
 }
 
 /* main section */
+.carouselImg{
+  margin-top: 1px;
+  width:100%;
+  height:400px;
+  object-fit: contain;
+  background-color:black;
+  
+}
 .products {
   display: flex;
   flex-wrap: wrap;
@@ -81,11 +89,91 @@ main {
 .price{
   font-weight: bold;
 }
+.btn-primary:hover{
+  background-color:antiquewhite;
+  color: black;
+  border: 1px solid antiquewhite;
+}
+.review{
+  padding-left: 3px;
+}
+.rating span{
+  color:#ffc000;
+  margin-left: 1px;
+}
+.img-large{
+  max-width: 100%;
+  margin: 20%;
+  padding: auto;
+}
+.col-size{
+  margin-top: 8%;
 
+  margin-left: -100px;
+}
+.radio-size{
+  margin-left: 15px;
+}
 /* footer section */
 .btn-color {
   background-color: #d2001a;
 }
 .footer-bg-color {
   background-color: #fffae7;
+}
+.red-box{
+  height:20px;
+  width:20px;
+  background-color: red;
+}
+.blue-box{
+  height:20px;
+  width:20px;
+  background-color: blue;
+}
+.green-box{
+  height:20px;
+  width:20px;
+  background-color: green;
+}
+.white-box{
+  height:20px;
+  width:20px;
+  background-color: yellow;
+  border: black;
+}
+
+/* signup page section */
+.imgFormposition img
+{
+ position: relative;
+ width: 100%;
+ height: auto;
+ z-index: -1;
+ margin-top: 1px;
+}
+.imgFormposition form{
+  position:absolute;
+  margin-top: -500px;
+  margin-left: 450px;
+ 
+}
+.font-color{
+  color: #fffae7;
+}
+.inline-position{
+  display: inline;
+
+}
+.btn-size{
+  font-size: smaller;
+  font-weight: bold;
+  margin-right: 2px;
+  margin-left: 2px;
+}
+.form-size{
+width:200%;
+}
+.margin-box{
+  margin-top: 20px;
 }

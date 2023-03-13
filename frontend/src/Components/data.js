@@ -6,7 +6,8 @@ const data = {
       category: 'dress',
       image: '/images/p5.jpeg',
       price: 25,
-      rating: 4.5,
+      rating: 4.0,
+      numReviews:9,
       description:
         ' Womens Elegant Dress Elegant Wedding Guest Office Vacation Spring Dress Winter Dress Fall Dress Semi Formal Dress Lace Dress',
     },
@@ -17,6 +18,7 @@ const data = {
       image: '/images/p6.jpeg',
       price: 156.99,
       rating: 4.0,
+      numReviews:9,
       description:
         ' Jumpsuit / Pantsuit 3 Piece Mother of the Bride Dress Formal Plus Size Elegant Wrap Included Bateau Neck Floor Length Chiffon Sleeveless with Lace 2023 ',
     },
@@ -26,7 +28,8 @@ const data = {
       category: 'dress',
       image: '/images/p8.jpeg',
       price: 125.29,
-      rating: 4.5,
+      rating: 3.5,
+      numReviews:10,
       description:
         ' Womens Elegant Dress Elegant Wedding Guest Office Vacation Spring Dress Winter Dress Fall Dress Semi Formal Dress Lace Dress',
     },
@@ -36,7 +39,8 @@ const data = {
       category: 'dress',
       image: '/images/p4.jpeg',
       price: 132.22,
-      rating: 4.5,
+      rating: 3,
+      numReviews:10,
       description:
         ' Womens Elegant Dress Elegant Wedding Guest Office Vacation Spring Dress Winter Dress Fall Dress Semi Formal Dress Lace Dress',
     },
@@ -46,7 +50,8 @@ const data = {
       category: 'dress',
       image: '/images/p5.jpeg',
       price: 18.99,
-      rating: 4.5,
+      rating: 2.5,
+      numReviews:10,
       description:
         ' Womens Elegant Dress Elegant Wedding Guest Office Vacation Spring Dress Winter Dress Fall Dress Semi Formal Dress Lace Dress',
     },
@@ -56,7 +61,8 @@ const data = {
       category: 'dress',
       image: '/images/p6.jpeg',
       price: 35.32,
-      rating: 4.5,
+      rating: 2,
+      numReviews:10,
       description:
         ' Womens Elegant Dress Elegant Wedding Guest Office Vacation Spring Dress Winter Dress Fall Dress Semi Formal Dress Lace Dress',
     },
@@ -66,7 +72,7 @@ const data = {
       category: 'dress',
       image: '/images/p7.jpeg',
       price: 120.34,
-      rating: 4.5,
+      rating: 1.5,
       description:
         ' Womens Elegant Dress Elegant Wedding Guest Office Vacation Spring Dress Winter Dress Fall Dress Semi Formal Dress Lace Dress',
     },
@@ -76,7 +82,7 @@ const data = {
       category: 'dress',
       image: '/images/p8.jpeg',
       price: 25,
-      rating: 4.5,
+      rating: 1,
       description:
         ' Womens Elegant Dress Elegant Wedding Guest Office Vacation Spring Dress Winter Dress Fall Dress Semi Formal Dress Lace Dress',
     },

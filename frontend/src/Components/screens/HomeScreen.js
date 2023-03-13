@@ -1,10 +1,11 @@
-import { Link } from 'react-router-dom';
-import { useState, useEffect, useReducer } from 'react';
+
+import {  useEffect, useReducer } from 'react';
 import axios from 'axios';
 import logger from 'use-reducer-logger';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
-import Button from 'react-bootstrap/Button';
+import Product from '../product';
+import CarouselImg from '../carousel';
 
 const reducer = (state, action) => {
   switch (action.type) {
@@ -39,9 +40,11 @@ function HomeScreen() {
     };
     fetchData();
   }, []);
-
+      
   return (
     <div>
+    <CarouselImg />
+       
       <h1>Featured Products</h1>
       <div className="products">
         {loading ? (
@@ -51,26 +54,8 @@ function HomeScreen() {
         ) : (
           <Row>
             {products.map((product) => (
-              <Col sm={6} md={4} lg={3} className="mb-3">
-                <div key={product.slug} className="card " >
-                  <Link to={`/product/${product.slug}`}>
-                    <img
-                      className="medium card-size"
-                      src={product.image}
-                      alt={product.name}
-                    />
-                  </Link>
-                  <div className="card-body item-center">
-                    <Link  to={`/product/${product.slug}`}>
-                      <h2 className='font'> {product.name}</h2>
-                    </Link>
-
-                    <div className="row">
-                      <div className="price">${product.price}</div>
-                      <Button className='product-btn-color'>Add to Cart</Button>
-                    </div>
-                  </div>
-                </div>
+              <Col key={product.slug}  sm={6} md={4} lg={3} className="mb-3">
+                <Product product={product}></Product>
               </Col>
             ))}
           </Row>
