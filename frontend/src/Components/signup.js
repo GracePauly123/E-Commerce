@@ -19,6 +19,7 @@ function Signup() {
             class="form-control margin-box"
             id="floatingInput"
             placeholder="name@example.com"
+            required
           />
           <label for="floatingInput">Email address</label>
         </div>
@@ -28,6 +29,7 @@ function Signup() {
             class="form-control margin-box"
             id="floatingPassword"
             placeholder="Password"
+            required
           />
           <label for="floatingPassword">Password</label>
         </div>
@@ -41,7 +43,7 @@ function Signup() {
         <button class="w-30 btn btn-lg  btn-color font-color btn-size" type="submit">
           Login
         </button>
-        <p className='font-color'>New customer? Create an account <Link to={'/signup?redirect=${redirect}'}>here</Link></p>
+        <p className='font-color'>New customer?{' '} Create an account <Link to={'/signup?redirect=${redirect}'}>here</Link></p>
         </div>
       </form>
       

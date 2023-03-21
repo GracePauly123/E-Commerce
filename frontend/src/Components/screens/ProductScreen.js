@@ -1,6 +1,6 @@
-import { useParams } from 'react-router-dom';
+import { useParams ,useNavigate} from 'react-router-dom';
 import axios from 'axios';
-import { useReducer } from 'react';
+import { useContext, useReducer } from 'react';
 import { useEffect } from 'react';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
@@ -10,6 +10,8 @@ import Button from 'react-bootstrap/esm/Button';
 import Form from 'react-bootstrap/Form';
 import RadioButton from '../sizeradiobutton';
 import ColorCheckBox from '../colorcheckbox';
+import { Store } from '../Store'
+
 
 const reducer = (state, action) => {
   switch (action.type) {
@@ -25,6 +27,7 @@ const reducer = (state, action) => {
 };
 
 function ProductScreen() {
+  const navigate = useNavigate();
   const params = useParams();
   const { slug } = params;
   const [{ loading, error, product }, dispatch] = useReducer(reducer, {
@@ -46,6 +49,22 @@ function ProductScreen() {
     fetchData();
   }, [slug]);
 
+  const { state, dispatch: ctxDispatch } = useContext(Store);
+  const { cart } = state;
+  const addToCartHandler = async() => {
+    const existItem = cart.cartItems.find((x) => x._id === product._id);
+    const quantity = existItem ? existItem.quantity + 1 : 1;
+    const { data } = await axios.get(`/api/products/${product._id}`);
+    if (data.countInStock < quantity) {
+      window.alert('Sorry. Product is out of stock');
+      return;
+    }
+    ctxDispatch({
+      type: 'CART_ADD_ITEM',
+      payload: { ...product, quantity},
+    });
+    navigate('/cart');
+  }
   return loading ? (
     <div>Loading...</div>
   ) : error ? (
@@ -69,7 +88,7 @@ function ProductScreen() {
           <RadioButton />
           <ColorCheckBox />
           <br />
-          <Button>Add to cart</Button>
+          <Button onClick={addToCartHandler} className='btn-color margin-space'>Add to cart</Button>
         </Col>
       </Row>
       <Row>

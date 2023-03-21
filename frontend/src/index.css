@@ -98,7 +98,7 @@ main {
   padding-left: 3px;
 }
 .rating span{
-  color:#ffc000;
+  color:#d2001a;
   margin-left: 1px;
 }
 .img-large{
@@ -117,6 +117,9 @@ main {
 /* footer section */
 .btn-color {
   background-color: #d2001a;
+}
+.margin-space{
+  margin-left: 15px;
 }
 .footer-bg-color {
   background-color: #fffae7;
@@ -141,6 +144,10 @@ main {
   width:20px;
   background-color: yellow;
   border: black;
+}
+.colorRow{
+  display: inline-block;
+  margin-left: 9px;
 }
 
 /* signup page section */
@@ -176,4 +183,11 @@ width:200%;
 }
 .margin-box{
   margin-top: 20px;
+}
+/* product Screen */
+.img-large {
+  max-width: 100%;
+}
+.img-thumbnail {
+  height: 80px;
 }

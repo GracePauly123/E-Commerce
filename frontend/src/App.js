@@ -7,8 +7,13 @@ import Container from 'react-bootstrap/Container';
 import NavigationBar from './Components/navbar';
 import FooterSection from './Components/footer';
 import CarouselImg from './Components/carousel';
+import CartScreen from './Components/screens/CartScreen';
+import { useContext } from 'react';
+import { Store } from './Components/Store';
+
 
 function App() {
+
   return (
     <BrowserRouter>
       <div className="container d-flex flex-column ">
@@ -22,6 +27,7 @@ function App() {
             <Routes>
               <Route path='/signup' element={<Signup/>}/>
               <Route path="/product/:slug" element={<ProductScreen />} />
+              <Route path="/cart" element={<CartScreen />} />
               <Route path="/" element={<HomeScreen />} />
             </Routes>
           </Container>
